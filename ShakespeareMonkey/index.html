@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genetic Algorithm for Shakespeare Monkey Problem</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/5.2.0/fira_code.min.css"
+        integrity="sha512-MbysAYimH1hH2xYzkkMHB6MqxBqfP0megxsCLknbYqHVwXTCg9IqHbk+ZP/vnhO8UEW6PaXAkKe2vQ+SWACxxA=="
+        crossorigin="anonymous" />
+</head>
+<body>
+    <h1>GENETIC ALGORITHM FOR SHAKESPEARE MONKEY PROBLEM</h1>
+    <div id="form">
+        <!-- Target string -->
+        <span class="formItem">
+            <label for="targetString">TARGET STRING</label>
+            <input type="text" name="targetString" id="targetStringBox" placeholder="unicorn, rainbow, ...">
+        </span>
+
+        <!-- Population limit -->
+        <span class="formItem">
+            <label for="populationSize">POPULATION SIZE</label>
+            <input type="number" name="populationSize" id="populationSizeBox" value="100" min="1">
+        </span>
+        
+        <!-- Mutation rate -->
+        <span class="formItem">
+            <label for="mutationRate">MUTATION RATE %</label>
+            <input type="number" name="mutationRate" id="mutationRateBox" value="1" min="0" max="100" step="0.01">
+        </span>
+
+        <!-- Animation delay -->
+        <span class="formItem" id="sliderWrapper">
+            <label for="animationDelay">ANIMATION DELAY (ms)</label>
+            <div style="display: flex;">
+                <input type="range" name="animationDelay" id="animationDelaySlider" oninput="updateAnimationDelayBox()" value="5" min="0" max="1000">
+                <input type="text" id="animationDelayBox" oninput="updateAnimationDelaySlider()"></p>
+            </div>
+        </span>
+
+        <!-- Maximum generations -->
+        <span class="formItem">
+            <label for="maxGenerations">MAX GENERATIONS</label>
+            <input type="number" name="maxGenerations" id="maxGenerationsBox" value="1000" min="1">
+        </span>
+
+        <!-- Mating Algorithm -->
+        <span class="formItem btnFormItem" style="align-content: center;">
+            <label for="matingAlgorithm">MATING ALGORITHM</label>
+            <select id="matingAlgorithmBox">
+                <option value="alternate">ALTERNATE</option>
+                <option value="halfEach" selected>HALF EACH</option>
+            </select>
+        </span>
+
+        <!-- Start button -->
+        <span class="formItem btnFormItem" id="startBtnWrapper">
+            <button id="startBtn" onclick="start()">START</button>
+        </span>
+
+        <!-- Abort button -->
+        <span class="formItem btnFormItem" id="abortBtnWrapper" style="display: none;">
+            <button id="abortBtn" onclick="abort()">ABORT</button>
+        </span>
+    </div>
+
+    <div id="genResultsBox">
+        <div id="errorBox"></div>
+        <span id="generationBox">
+            <h4>GENERATION</h4>
+            <h1 id="generation">#56</h1>
+        </span>
+
+        <h1 id="fittest">To be or not to be.</h1>
+        
+        <span id="genMetricsBox">
+            <span class="metricBox">
+                <h4 class="header">OVERALL FITNESS</h4>
+                <h4 class="metric" id="fitnessPercentage">10%</h4>
+            </span>
+            <span class="metricBox">
+                <h4 class="header">MUTATION RATE</h4>
+                <h4 class="metric" id="mutationRate">1%</h4>
+            </span>
+        </span>
+
+        <table id="population">
+            <tbody id="populationBody"></tbody>
+        </table>
+    </div>
+
+    <script src="genetic.js"></script>
+    <script src="view.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

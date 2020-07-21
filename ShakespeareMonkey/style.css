@@ -1,0 +1,240 @@
+* {
+    font-family: monospace;
+}
+
+body {
+    background-color: #282828;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+#form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    min-width: 50%;
+    max-width: 80%;
+    border-radius: 10px;
+
+    background-color: #555;
+}
+
+input[type=text], input[type=number] {
+    border: solid 2px #333;
+    border-radius: 10px;
+
+    padding: 10px;
+    font-size: 1.4em;
+
+    background-color: #333;
+    color: white;
+    outline: none;
+
+    -moz-appearance: textfield;
+}
+
+input:focus {
+    border: solid 2px greenyellow;
+}
+
+#sliderWrapper {
+    background-color: #333;
+    color: white;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.animationDelaySlider::-webkit-slider-runnable-track {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+    outline: none;
+    background: #666;
+}
+
+.animationDelaySlider::-webkit-slider-thumb,
+.animationDelaySlider::-moz-slider-thumb {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+    width: 10px;
+    height: 10px;
+
+    background: green;
+}
+
+#animationDelayBox {
+    margin-left: 20px;
+    font-size: 1.4em;
+    max-width: 50px;
+
+    border: solid 2px #555;
+}
+
+.formItem {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    margin: 15px;
+}
+
+.formItem > label {
+    padding: 5px;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+#targetStringBox {
+    min-width: 400px;
+}
+
+.btnFormItem {
+    align-self: flex-end;
+}
+
+select {
+    padding: 10px 20px;
+    background-color: #333;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 10px;
+}
+
+#startBtn, #abortBtn {
+    border: none;
+    border-radius: 1em;
+    outline: none;
+
+    font-size: 1.4em;
+    font-weight: bold;
+    
+    width: 6em;
+    height: 3em;
+
+    cursor: pointer;
+}
+
+#startBtn:hover {
+    background-color: #111;
+    color: #9add35;
+}
+
+#startBtn {
+    background-color: #9add35;
+    color: #222;
+}
+
+#abortBtn {
+    background-color: red;
+    color: white;
+}
+
+#abortBtn:hover {
+    background-color: #111;
+    color: red;
+}
+
+#genResultsBox {
+    width: 90%;
+
+    margin: 40px 0px 50px 0px;
+    border-radius: 10px;
+    background-color: #666;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#errorBox {
+    background-color: red;
+    color: white;
+    
+    font-size: 2em;
+    font-weight: bold;
+
+    border-radius: 10px 10px 0px 0px;
+    padding: 10px;
+
+    margin-bottom: 20px;
+}
+
+#fittest {
+    font-size: 5em;
+    margin: 0px;
+}
+
+#generationBox > h1, #generationBox > h4 {
+    margin: 0px;
+}
+
+#generationBox {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#generationBox > h1 {
+    font-size: 4em;
+    color: greenyellow;
+}
+
+#generationBox > h4 {
+    color: #ababab;
+    font-size: 4em;
+}
+
+#genMetricsBox {
+    display: flex;
+    justify-content: center;
+}
+
+.metricBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.metricBox > .metric {
+    margin: 0px;
+    color: greenyellow;
+    font-size: 1.8em;
+}
+
+.metricBox > .header {
+    margin: 0px;
+    color: #ccc;
+    font-size: 1.5em;
+}
+
+#population {
+    width: 100%;
+    font-size: 1.4em;
+    color: #bbb;
+    margin: 30px 0px;
+    overflow: scroll;
+}
+
+#population > tbody > td {
+    word-wrap: break-word;
+}
+
+.targetMember {
+    color: gold;
+    font-weight: bold;
+}
