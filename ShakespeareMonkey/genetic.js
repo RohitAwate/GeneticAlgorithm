@@ -4,6 +4,14 @@
 const CHARSET = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ .,!";
 
 /**
+ * Tests if a string is valid as per the allowed character set.
+ * @param {String} str 
+ */
+const isValidString = (str) => {
+    return /^[a-zA-Z\s.,!]+$/g.test(str);
+};
+
+/**
  * Generates a random string of the specified length
  * consisting of the characters allowed by CHARSET.
  * 

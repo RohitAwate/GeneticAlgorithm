@@ -19,6 +19,11 @@ const start = () => {
     }
 
     const targetString = targetStringBox.value;
+    if (!isValidString(targetString)) {
+        alert("String can only contain lower/upper case alphabet, spaces, periods, commas and exclamation points.");
+        return;
+    }
+
     const populationSize = Number.parseInt(populationSizeBox.value);
     if (populationSize < 2) {
         alert("Need at least 2 parents.");
