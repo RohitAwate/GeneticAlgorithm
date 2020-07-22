@@ -48,8 +48,10 @@ const abort = () => {
 }
 
 const fittestHeading = document.getElementById("fittest");
-const showFittest = (fittest) => {
-    fittestHeading.innerHTML = fittest;
+const fittestPercentageHeading = document.getElementById("fittestPercentage");
+const showFittest = (fittestMember, fittestMemberScore) => {
+    fittestHeading.innerHTML = fittestMember;
+    fittestPercentageHeading.innerHTML = `${fittestMemberScore === undefined ? '': fittestMemberScore}%`; 
 };
 
 const generationHeading = document.getElementById("generation");

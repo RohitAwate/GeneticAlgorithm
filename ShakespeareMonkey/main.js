@@ -14,7 +14,7 @@ const mainWorker = (target, population, mutationRate, matingAlgo, generation) =>
 
     if (generationData.targetFound) {
         showAlert("Target found!");
-        showFittest(target);
+        showFittest(target, 100);
         toggleForm();
         return;
     }
@@ -26,7 +26,8 @@ const mainWorker = (target, population, mutationRate, matingAlgo, generation) =>
         return;
     }
 
-    showFittest(generationData.fitness.fittest);
+    const fittestPercentage = Math.round(generationData.fitness.fittest.score / target.length * 10000) / 100;
+    showFittest(generationData.fitness.fittest.member, fittestPercentage);
     showFitnessPercentage(generationData.fitness.fitnessPercentage);
     
     population = generationData.nextGeneration;

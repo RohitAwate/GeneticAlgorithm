@@ -75,7 +75,11 @@ const getPopulationFitnessData = (target, population) => {
     const fitnessMap = {};
 
     let totalFitness = 0;
-    let fittest = 0;
+    let fittest = {
+        member: '',
+        score: 0,    
+    };
+
     for (let i = 0; i < population.length; i++) {
         const member = population[i];
         const score = getFitnessScore(target, member);
@@ -87,8 +91,9 @@ const getPopulationFitnessData = (target, population) => {
             fitnessMap[member] = score;
         }
 
-        if (score >= fitnessMap[population[fittest]]) {
-            fittest = i;
+        if (score >= fittest.score) {
+            fittest.score = score;
+            fittest.member = member;
         }
 
         totalFitness += score;
@@ -102,7 +107,7 @@ const getPopulationFitnessData = (target, population) => {
         fitnessPercentage: fitnessPercentage,
         fitnessMap: fitnessMap,
         totalFitness: totalFitness,
-        fittest: population[fittest]
+        fittest: fittest
     };
 };
 

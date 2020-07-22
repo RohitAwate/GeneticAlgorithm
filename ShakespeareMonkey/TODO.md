@@ -13,6 +13,5 @@
 - [x] Extend charset
 - [x] allow switching mating algorithms
 - [x] check if target string is valid
-- [ ] show graphs for overall fitness
-- [ ] automatically determine number of columns for population
+- [x] show fitness percentage of fittest
 - [ ] Tweet about surge.sh

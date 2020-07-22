@@ -172,9 +172,22 @@ select {
     margin-bottom: 20px;
 }
 
+#fittestBox {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
 #fittest {
     font-size: 5em;
+    padding: 0px;
+}
+
+#fittestPercentage {
     margin: 0px;
+    margin-left: 5px;
+    font-size: 4em;
+    color: gold;
 }
 
 #generationBox > h1, #generationBox > h4 {
@@ -185,16 +198,18 @@ select {
     padding: 10px;
     display: flex;
     justify-content: center;
+    align-items: baseline;
 }
 
 #generationBox > h1 {
     font-size: 4em;
+    margin-left: 5px;
     color: greenyellow;
 }
 
 #generationBox > h4 {
     color: #ababab;
-    font-size: 4em;
+    font-size: 3.3em;
 }
 
 #genMetricsBox {
