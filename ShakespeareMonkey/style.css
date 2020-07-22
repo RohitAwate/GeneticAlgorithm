@@ -14,6 +14,22 @@ body {
 
 h1 {
     font-size: 1.5em;
+    margin-bottom: 0px;
+}
+
+#credits {
+    font-weight: lighter;
+    margin-top: 0px;
+}
+
+#credits > a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+#credits > a:hover {
+    color: orangered;
 }
 
 #form {
@@ -107,8 +123,8 @@ input:focus, select:focus {
 
 select {
     padding: 10px 20px;
+    border: solid 2px #333;
     background-color: #333;
-    border: none;
     outline: none;
     color: white;
     border-radius: 10px;
@@ -173,9 +189,6 @@ select {
 }
 
 #fittestBox {
-    /* display: flex;
-    justify-content: center;
-    align-items: baseline; */
     margin: 10px;
 }
 
