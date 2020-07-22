@@ -113,13 +113,12 @@ const getMatingAlgorithm = () => {
 };
 
 const genResultsBox = document.getElementById("genResultsBox");
-genResultsBox.style.visibility = 'hidden';
 const showGenResultsBox = () => {
     genResultsBox.style.visibility = '';
 };
 
 const errorBox = document.getElementById("errorBox");
-const showError = (msg) => {
+const showAlert = (msg) => {
     if (errorBox.innerHTML !== '') {
         errorBox.innerHTML += '<br>' + msg;
     } else {

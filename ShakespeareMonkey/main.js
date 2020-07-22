@@ -13,6 +13,7 @@ const mainWorker = (target, population, mutationRate, matingAlgo, generation) =>
     showGeneration(generation);
 
     if (generationData.targetFound) {
+        showAlert("Target found!");
         showFittest(target);
         toggleForm();
         return;
@@ -20,7 +21,7 @@ const mainWorker = (target, population, mutationRate, matingAlgo, generation) =>
     
     if (generationData.nextGeneration === null) {
         showFittest('Oops..');
-        showError("No parents fit enough to mate in this generation.");
+        showAlert("No parents fit enough to mate in this generation.");
         toggleForm();
         return;
     }
@@ -32,13 +33,13 @@ const mainWorker = (target, population, mutationRate, matingAlgo, generation) =>
     generation++;
 
     if (generation > getMaxGenerations()) {
-        showError(`Exceeded max generations limit.`);
+        showAlert(`Exceeded max generations limit.`);
         toggleForm();
         return;
     }
 
     if (ABORT) {
-        showError("Execution aborted.");
+        showAlert("Execution aborted.");
         toggleForm();
         return;
     }
