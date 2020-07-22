@@ -26,7 +26,7 @@ const mainWorker = (target, population, mutationRate, matingAlgo, generation) =>
         return;
     }
 
-    const fittestPercentage = Math.round(generationData.fitness.fittest.score / target.length * 10000) / 100;
+    const fittestPercentage = Math.round(generationData.fitness.fittest.score / target.length * 100);
     showFittest(generationData.fitness.fittest.member, fittestPercentage);
     showFitnessPercentage(generationData.fitness.fitnessPercentage);
     
