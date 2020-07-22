@@ -42,7 +42,7 @@ input[type=text], input[type=number] {
     -moz-appearance: textfield;
 }
 
-input:focus {
+input:focus, select:focus {
     border: solid 2px greenyellow;
 }
 
